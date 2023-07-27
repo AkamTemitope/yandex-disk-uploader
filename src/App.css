@@ -1,0 +1,142 @@
+.app {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.login {
+  align-self: center;
+}
+.login button {
+  margin-right: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: #3490dc;
+  color: #fff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  border-color: #3490dc;
+}
+
+.uploader {
+  display: flex;
+  align-self: flex-start;
+  margin-top: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logout {
+  align-self: flex-end;
+}
+
+.logout button {
+  padding: 0.5rem 1rem;
+  background-color: red;
+  color: #fff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  border-color: red;
+}
+
+.uploader-container {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.select-files-btn {
+  margin-right: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: #3490dc;
+  color: #fff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.select-files-btn:hover {
+  background-color: #2779bd;
+}
+
+.upload-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  color: #fff;
+}
+
+.upload-btn-active {
+  background-color: #38a169;
+  border: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.upload-btn-active:hover {
+  background-color: #2f855a;
+}
+
+.upload-btn-inactive {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  background-color: #a0aec0;
+}
+
+.selected-files-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 70vh;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+  overflow-y: auto;
+}
+
+.file-info {
+  font-size: 1.1rem;
+  padding-left: 5px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  border-left: 2px solid rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 5%;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #3490dc;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
